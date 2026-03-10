@@ -97,8 +97,4 @@ Projetos como este são amplamente utilizados no setor financeiro para:
 - definição de limites de crédito
 - apoio à tomada de decisão
 
----
 
-## Autor
-
-Desenvolvido por **Giovanna Dantas**
