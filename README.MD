@@ -1,80 +1,53 @@
 # Previsão de Score de Crédito de Clientes com Machine Learning
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
+![Scikit--learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?logo=scikit-learn&logoColor=white)
+
 ## Descrição
-Este projeto tem como objetivo construir um **modelo de Machine Learning capaz de prever o score de crédito de clientes de um banco**.
 
-A partir de uma base de dados contendo informações sobre **100.000 clientes**, foram realizadas etapas de **tratamento de dados, análise exploratória e treinamento de modelos de classificação**, com o objetivo de classificar cada cliente em uma das três categorias de score: **Ruim, Ok ou Bom**.
+Modelo de Machine Learning que prevê o **score de crédito** de clientes de um banco, classificando-os em **Ruim, Ok ou Bom**, a partir de uma base com **100.000 clientes**.
 
-Esse tipo de modelo é extremamente importante para instituições financeiras, pois auxilia na tomada de decisões relacionadas a:
-- concessão de crédito
-- empréstimos
-- definição de limites
-- análise de risco de inadimplência
+Esse tipo de modelo é usado por instituições financeiras para apoiar decisões de concessão de crédito, definição de limites e análise de risco de inadimplência.
 
 ---
 
-## Tecnologias utilizadas
-- Python
-- Pandas
-- Scikit-learn
-- Jupyter Notebook
+## Resultados
+
+| Modelo | Acurácia |
+|---|---|
+| **Random Forest** ✅ | **82,6%** |
+| KNN | 73,5% |
+
+O **Random Forest** foi o modelo escolhido, acertando o score em mais de 8 a cada 10 clientes.
 
 ---
 
-## Objetivo do projeto
-Criar um modelo capaz de classificar o score de crédito de um cliente em **Ruim, Ok ou Bom**, utilizando algoritmos de **Machine Learning supervisionado**.
+## Tecnologias
+
+Python · Pandas · Scikit-learn · Jupyter Notebook
 
 ---
 
 ## Etapas do projeto
 
-O projeto foi desenvolvido seguindo as seguintes etapas:
-
-### 1. Importação da base de dados
-Carregamento da base contendo informações dos clientes.
-
----
-
-### 2. Análise inicial dos dados
-- Verificação de dados ausentes
-- Identificação de tipos de variáveis
-- Inspeção geral da base de dados
+1. **Importação da base** — carregamento dos dados dos clientes
+2. **Análise inicial** — tipos de variáveis, dados ausentes
+3. **Tratamento dos dados** — codificação de variáveis categóricas (`profissao`, `mix_credito`, `comportamento_pagamento`) com `LabelEncoder`
+4. **Treinamento** — comparação entre Random Forest e KNN
+5. **Avaliação** — escolha do melhor modelo por acurácia
+6. **Previsão** — aplicação do modelo em novos clientes
 
 ---
 
-### 3. Tratamento dos dados
-- Codificação de variáveis categóricas (profissão, mix de crédito e comportamento de pagamento) com `LabelEncoder`
-- Preparação da base para o treinamento dos modelos
+## Como executar
 
----
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+pip install pandas scikit-learn jupyter
+jupyter notebook
+```
 
-### 4. Seleção das variáveis
-Definição das colunas que serão utilizadas como **features** (variável `x`) e da coluna alvo `score_credito` (variável `y`) para o modelo de Machine Learning.
+Abra o `.ipynb` e execute as células em ordem (`clientes.csv` e `novos_clientes.csv` devem estar na mesma pasta).
 
----
 
-### 5. Treinamento dos modelos
-Foram utilizados dois algoritmos de classificação:
-- **Random Forest** (`RandomForestClassifier`)
-- **KNN — K-Nearest Neighbors** (`KNeighborsClassifier`)
-
-Esses modelos foram treinados para prever o **score de crédito dos clientes** (Ruim, Ok ou Bom).
-
----
-
-### 6. Avaliação dos modelos
-Após o treinamento, os modelos foram avaliados por meio da métrica de **acurácia**, comparando as previsões com os dados de teste. O modelo **Random Forest** apresentou o melhor desempenho (aproximadamente 82,6% de acurácia, contra 73,5% do KNN) e foi escolhido para gerar as previsões finais.
-
----
-
-### 7. Previsão de novos clientes
-Com o modelo de melhor desempenho já treinado, o mesmo processo de codificação das variáveis categóricas foi aplicado a uma nova base de clientes, permitindo prever o score de crédito de novos casos.
-
----
-
-## Importância do projeto
-Projetos como este são amplamente utilizados no setor financeiro para:
-- análise de risco de crédito
-- prevenção de inadimplência
-- definição de limites de crédito
-- apoio à tomada de decisão
+Feito por [seu nome aqui].
