@@ -50,4 +50,4 @@ jupyter notebook
 Abra o `.ipynb` e execute as células em ordem (`clientes.csv` e `novos_clientes.csv` devem estar na mesma pasta).
 
 
-Feito por [seu nome aqui].
+Feito por Giovanna Dantas.
