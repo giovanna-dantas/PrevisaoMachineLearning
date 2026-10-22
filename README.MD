@@ -42,7 +42,7 @@ Python · Pandas · Scikit-learn · Jupyter Notebook
 ## Como executar
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/giovanna-dantas/PrevisaoMachineLearning
 pip install pandas scikit-learn jupyter
 jupyter notebook
 ```
